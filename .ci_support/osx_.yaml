@@ -1,0 +1,25 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+c_compiler:
+- toolchain_c
+jpeg:
+- '9'
+libpng:
+- 1.6.34
+libtiff:
+- 4.0.9
+macos_machine:
+- x86_64-apple-darwin13.4.0
+macos_min_version:
+- '10.9'
+pin_run_as_build:
+  jpeg:
+    max_pin: x
+  libpng:
+    max_pin: x.x
+  libtiff:
+    max_pin: x
+  zlib:
+    max_pin: x.x
+zlib:
+- '1.2'
