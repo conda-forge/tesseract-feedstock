@@ -1,19 +1,35 @@
 c_compiler:
 - toolchain_c
+giflib:
+- '5.1'
 jpeg:
 - '9'
 libpng:
 - 1.6.34
 libtiff:
 - 4.0.9
+libwebp:
+- '0.5'
+openjpeg:
+- '2.3'
 pin_run_as_build:
+  giflib:
+    max_pin: x.x
   jpeg:
     max_pin: x
   libpng:
     max_pin: x.x
   libtiff:
     max_pin: x
+  libwebp:
+    max_pin: x.x
+  openjpeg:
+    max_pin: x.x
+  xz:
+    max_pin: x.x
   zlib:
     max_pin: x.x
+xz:
+- '5.2'
 zlib:
 - '1.2'
