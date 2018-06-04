@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -28,12 +28,20 @@ requirements:
     - libtool
     - zlib
     - leptonica
+    - libwebp
+    - xz
+    - openjpeg
+    - giflib
   run:
     - libpng
     - jpeg
     - libtiff
     - zlib
     - leptonica
+    - libwebp
+    - xz
+    - openjpeg
+    - giflib
 
 test:
   commands:
