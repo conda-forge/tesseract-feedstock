@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -28,12 +28,20 @@ requirements:
     - libtool
     - zlib
     - leptonica
+    - libwebp
+    - xz
+    - openjpeg
+    - giflib
   run:
     - libpng
     - jpeg
     - libtiff
     - zlib
     - leptonica
+    - libwebp
+    - xz
+    - openjpeg
+    - giflib
 
 test:
   commands:
@@ -47,8 +55,8 @@ about:
   summary: 'An optical character recognition (OCR) engine'
 
   description: |
-    Tesseract is an OCR engine with support for unicode and the ability 
-    to recognize more than 100 languages out of the box. It can be 
+    Tesseract is an OCR engine with support for unicode and the ability
+    to recognize more than 100 languages out of the box. It can be
     trained to recognize other languages.
   doc_url: https://github.com/tesseract-ocr/tesseract
   dev_url: https://github.com/tesseract-ocr/tesseract
