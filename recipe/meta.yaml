@@ -7,8 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/tesseract-ocr/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  - url: https://github.com/tesseract-ocr/{{ name }}/archive/{{ version }}.tar.gz
+    sha256: {{ sha256 }}
+  - url: https://github.com/tesseract-ocr/tessdata/archive/3.04.00.tar.gz
+    sha256: 5dcb37198336b6953843b461ee535df1401b41008d550fc9e43d0edabca7adb1
+    folder: tessdata
 
 build:
   number: 1
@@ -44,8 +47,12 @@ requirements:
     - giflib
 
 test:
+  files:
+    - image.png
   commands:
     - tesseract --help
+    - tesseract --list-langs
+    - tesseract image.png outputbase
 
 about:
   home: https://github.com/tesseract-ocr/tesseract
