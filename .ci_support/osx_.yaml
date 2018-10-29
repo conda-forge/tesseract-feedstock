@@ -2,6 +2,10 @@ MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 c_compiler:
 - toolchain_c
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
 giflib:
 - '5.1'
 jpeg:
@@ -11,7 +15,7 @@ libpng:
 libtiff:
 - 4.0.9
 libwebp:
-- '0.5'
+- 1.0.0
 macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:

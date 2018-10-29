@@ -1,5 +1,11 @@
 c_compiler:
 - toolchain_c
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+docker_image:
+- condaforge/linux-anvil
 giflib:
 - '5.1'
 jpeg:
@@ -9,7 +15,7 @@ libpng:
 libtiff:
 - 4.0.9
 libwebp:
-- '0.5'
+- 1.0.0
 openjpeg:
 - '2.3'
 pin_run_as_build:
