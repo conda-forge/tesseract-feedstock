@@ -1,15 +1,27 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+build_number_decrement:
+- '0'
 c_compiler:
-- toolchain_c
+- clang
+channel_sources:
+- conda-forge/label/gcc7,defaults
+channel_targets:
+- conda-forge gcc7
 giflib:
 - '5.1'
 jpeg:
 - '9'
 libpng:
-- 1.6.34
+- 1.6.35
 libtiff:
 - 4.0.9
 libwebp:
-- '0.5'
+- 1.0.0
+macos_machine:
+- x86_64-apple-darwin13.4.0
+macos_min_version:
+- '10.9'
 openjpeg:
 - '2.3'
 pin_run_as_build:
@@ -31,5 +43,10 @@ pin_run_as_build:
     max_pin: x.x
 xz:
 - '5.2'
+zip_keys:
+- - c_compiler
+  - channel_sources
+  - channel_targets
+  - build_number_decrement
 zlib:
 - '1.2'
