@@ -3,7 +3,11 @@
 pushd tesseract
 
 autoreconf -fi
-LIBLEPT_HEADERSDIR="${PREFIX}/include" ./configure --prefix="${PREFIX}" --with-extra-libraries="${PREFIX}/lib" CC="${CC}" CXX="${CXX}"
+LIBLEPT_HEADERSDIR="${PREFIX}/include" ./configure \
+    --prefix="${PREFIX}" \
+    --with-extra-libraries="${PREFIX}/lib" \
+    CC="${CC}" \
+    CXX="${CXX}"
 make -j $CPU_COUNT
 make install
 popd
