@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 pushd tesseract
 
-autoreconf -fi
+./autogen.sh
 LIBLEPT_HEADERSDIR="${PREFIX}/include" ./configure \
     --prefix="${PREFIX}" \
     --with-extra-libraries="${PREFIX}/lib" \
