@@ -10,6 +10,6 @@ make -j $CPU_COUNT
 make install
 popd
 
-pushd tessdata
+pushd tessdata_fast
 cp -avf * $PREFIX/share/tessdata
 popd
