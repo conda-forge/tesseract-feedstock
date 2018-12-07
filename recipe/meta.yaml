@@ -48,12 +48,12 @@ requirements:
     - giflib
 
 test:
-  source_files:
-    - tesseract/testing/eurotext.tif
+  files:
+    - eurotext.tif
   commands:
     - tesseract --help
     - tesseract --list-langs
-    - tesseract tesseract/testing/eurotext.tif outputbase
+    - tesseract eurotext.tif outputbase
 
 about:
   home: https://github.com/tesseract-ocr/tesseract
