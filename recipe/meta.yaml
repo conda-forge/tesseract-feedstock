@@ -1,6 +1,6 @@
 {% set name = "tesseract" %}
-{% set version = "3.05.02" %}
-{% set sha256 = "494d64ffa7069498a97b909a0e65a35a213989e0184f1ea15332933a90d43445" %}
+{% set version = "4.0.0" %}
+{% set sha256 = "5dcb37198336b6953843b461ee535df1401b41008d550fc9e43d0edabca7adb1" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ source:
     folder: tessdata
 
 build:
-  number: 1001
+  number: 1000
   skip: True  # [win]
 
 requirements:
