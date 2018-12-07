@@ -15,12 +15,13 @@ source:
     folder: tessdata
 
 build:
-  number: 0
+  number: 1001
   skip: True  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - automake
     - autoconf
     - pkg-config
@@ -29,7 +30,6 @@ requirements:
     - libpng
     - jpeg
     - libtiff
-    - libtool
     - zlib
     - leptonica
     - libwebp
@@ -48,12 +48,12 @@ requirements:
     - giflib
 
 test:
-  files:
-    - image.png
+  source_files:
+    - tesseract/testing/eurotext.tif
   commands:
     - tesseract --help
     - tesseract --list-langs
-    - tesseract image.png outputbase
+    - tesseract tesseract/testing/eurotext.tif outputbase
 
 about:
   home: https://github.com/tesseract-ocr/tesseract
