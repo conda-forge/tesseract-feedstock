@@ -30,7 +30,6 @@ requirements:
     - libpng
     - jpeg
     - libtiff
-    - libtool
     - zlib
     - leptonica
     - libwebp
@@ -49,12 +48,12 @@ requirements:
     - giflib
 
 test:
-  files:
-    - image.png
+  source_files:
+    - testing/eurotext.tif
   commands:
     - tesseract --help
     - tesseract --list-langs
-    - tesseract image.png outputbase
+    - tesseract testing/eurotext.tif outputbase
 
 about:
   home: https://github.com/tesseract-ocr/tesseract
