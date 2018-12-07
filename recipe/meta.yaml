@@ -49,11 +49,11 @@ requirements:
 
 test:
   source_files:
-    - testing/eurotext.tif
+    - tesseract/testing/eurotext.tif
   commands:
     - tesseract --help
     - tesseract --list-langs
-    - tesseract testing/eurotext.tif outputbase
+    - tesseract tesseract/testing/eurotext.tif outputbase
 
 about:
   home: https://github.com/tesseract-ocr/tesseract
