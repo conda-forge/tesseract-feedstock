@@ -1,6 +1,6 @@
 {% set name = "tesseract" %}
 {% set version = "4.1.0" %}
-{% set sha256 = "f1b71e97f27bafffb6a730ee66fd9dc021afc38f318fdc80a464a84a519227fe" %}
+{% set sha256 = "5c5ed5f1a76888dc57a83704f24ae02f8319849f5c4cf19d254296978a1a1961" %}
 
 package:
   name: {{ name|lower }}
