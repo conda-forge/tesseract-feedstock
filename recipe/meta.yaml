@@ -1,6 +1,6 @@
 {% set name = "tesseract" %}
-{% set version = "4.0.0" %}
-{% set sha256 = "a1f5422ca49a32e5f35c54dee5112b11b99928fc9f4ee6695cdc6768d69f61dd" %}
+{% set version = "4.1.0" %}
+{% set sha256 = "f1b71e97f27bafffb6a730ee66fd9dc021afc38f318fdc80a464a84a519227fe" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ source:
     folder: tessdata_fast
 
 build:
-  number: 1001
+  number: 0
   skip: True  # [win]
 
 requirements:
