@@ -32,6 +32,7 @@ requirements:
 
   host:
     - giflib  # [not win]
+    - libarchive
     - jpeg
     - leptonica
     - libpng
@@ -40,7 +41,6 @@ requirements:
     - openjpeg
     - xz  # [not win]
     - zlib
-    - libarchive
 
   run:
     - libpng
