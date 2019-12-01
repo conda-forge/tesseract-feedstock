@@ -8,12 +8,14 @@ cxx_compiler:
 - vs2015
 jpeg:
 - '9'
+libarchive:
+- '3.3'
 libpng:
 - '1.6'
 libtiff:
-- 4.0.10
+- 4.1.0
 libwebp:
-- 1.0.0
+- '1.0'
 openjpeg:
 - '2.3'
 pin_run_as_build:
