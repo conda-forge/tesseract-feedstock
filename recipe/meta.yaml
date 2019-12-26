@@ -1,6 +1,6 @@
 {% set name = "tesseract" %}
-{% set version = "4.1.0" %}
-{% set sha256 = "5c5ed5f1a76888dc57a83704f24ae02f8319849f5c4cf19d254296978a1a1961" %}
+{% set version = "4.1.1" %}
+{% set sha256 = "f1b71e97f27bafffb6a730ee66fd9dc021afc38f318fdc80a464a84a519227fe" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ source:
     folder: tessdata_fast
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
