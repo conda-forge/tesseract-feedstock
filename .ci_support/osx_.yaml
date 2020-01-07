@@ -13,7 +13,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '9'
 giflib:
-- 5.1.7
+- '5.2'
 jpeg:
 - '9'
 libarchive:
