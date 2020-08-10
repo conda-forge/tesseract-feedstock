@@ -23,7 +23,7 @@ libpng:
 libtiff:
 - 4.1.0
 libwebp:
-- '1.0'
+- '1.1'
 openjpeg:
 - '2.3'
 pin_run_as_build:
@@ -33,14 +33,14 @@ pin_run_as_build:
     max_pin: x.x
   libtiff:
     max_pin: x
-  libwebp:
-    max_pin: x.x
   openjpeg:
     max_pin: x.x
   xz:
     max_pin: x.x
   zlib:
     max_pin: x.x
+target_platform:
+- linux-64
 xz:
 - '5.2'
 zlib:

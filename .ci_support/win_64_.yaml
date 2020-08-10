@@ -1,0 +1,37 @@
+c_compiler:
+- vs2017
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- vs2017
+jpeg:
+- '9'
+libarchive:
+- '3.3'
+libpng:
+- '1.6'
+libtiff:
+- 4.1.0
+libwebp:
+- '1.1'
+openjpeg:
+- '2.3'
+pin_run_as_build:
+  jpeg:
+    max_pin: x
+  libpng:
+    max_pin: x.x
+  libtiff:
+    max_pin: x
+  openjpeg:
+    max_pin: x.x
+  zlib:
+    max_pin: x.x
+target_platform:
+- win-64
+vc:
+- '14'
+zlib:
+- '1.2'
