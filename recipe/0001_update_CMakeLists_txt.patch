@@ -1,0 +1,22 @@
+From 0eaabc42c78ba523ad6399ea106f94b9ecb107ad Mon Sep 17 00:00:00 2001
+From: Egor Pugin <egor.pugin@gmail.com>
+Date: Tue, 12 May 2020 11:49:15 +0300
+Subject: [PATCH] Update CMakeLists.txt
+
+---
+ src/training/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/training/CMakeLists.txt b/src/training/CMakeLists.txt
+index 8f6c03dba..fdc1aec75 100644
+--- a/src/training/CMakeLists.txt
++++ b/src/training/CMakeLists.txt
+@@ -37,7 +37,7 @@ if (MSVC AND NOT SW_BUILD AND NOT USE_SYSTEM_ICU)
+     message(STATUS "Downloading latest ICU binaries")
+ 
+     file(DOWNLOAD
+-        "http://download.icu-project.org/files/icu4c/56.1/icu4c-56_1-Win${ARCH_DIR_NAME}-msvc10.zip"
++        "https://github.com/unicode-org/icu/releases/download/release-56-1/icu4c-56_1-Win${ARCH_DIR_NAME}-msvc10.zip"
+         "${icu_archive}"
+         SHOW_PROGRESS
+         INACTIVITY_TIMEOUT 300 # seconds

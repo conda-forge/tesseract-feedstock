@@ -9,12 +9,15 @@ source:
   - url: https://github.com/tesseract-ocr/{{ name }}/archive/{{ version }}.tar.gz
     sha256: 2a66ff0d8595bff8f04032165e6c936389b1e5727c3ce5a27b3e059d218db1cb
     folder: tesseract
+    patches:
+      - 0001_update_CMakeLists_txt.patch
   - url: https://github.com/tesseract-ocr/tessdata_fast/archive/4.0.0.tar.gz
     sha256: f1b71e97f27bafffb6a730ee66fd9dc021afc38f318fdc80a464a84a519227fe
     folder: tessdata_fast
+    
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
@@ -82,4 +85,5 @@ extra:
     - carlodri
     - adbeda
     - oblute
-    - rlura14
+    - xylar
+    
