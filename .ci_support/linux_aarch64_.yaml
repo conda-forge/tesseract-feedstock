@@ -3,7 +3,7 @@ BUILD:
 c_compiler:
 - gcc
 c_compiler_version:
-- '7.5'
+- '9'
 cdt_arch:
 - aarch64
 cdt_name:
@@ -15,9 +15,9 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '7.5'
+- '9'
 docker_image:
-- condaforge/linux-anvil-aarch64
+- quay.io/condaforge/linux-anvil-aarch64
 giflib:
 - '5.2'
 jpeg:
@@ -31,7 +31,7 @@ libtiff:
 libwebp:
 - '1.1'
 openjpeg:
-- '2.3'
+- '2.4'
 pin_run_as_build:
   jpeg:
     max_pin: x
@@ -49,5 +49,8 @@ target_platform:
 - linux-aarch64
 xz:
 - '5.2'
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
 zlib:
 - '1.2'

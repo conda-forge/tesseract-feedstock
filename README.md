@@ -5,9 +5,13 @@ Home: https://github.com/tesseract-ocr/tesseract
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tesseract-feedstock/blob/master/LICENSE.txt)
 
 Summary: An optical character recognition (OCR) engine
+
+Development: https://github.com/tesseract-ocr/tesseract
+
+Documentation: https://github.com/tesseract-ocr/tesseract
 
 Tesseract is an OCR engine with support for unicode and the ability
 to recognize more than 100 languages out of the box. It can be
