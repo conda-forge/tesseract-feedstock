@@ -2,6 +2,15 @@ cd tesseract
 mkdir build
 cd build
 
+curl -fsSOL https://software-network.org/client/sw-master-windows-client.zip
+if errorlevel 1 exit 1
+
+unzip sw-master-windows-client.zip -d .
+if errorlevel 1 exit 1
+
+sw setup
+if errorlevel 1 exit 1
+
 :: Remove -GL from CXXFLAGS as this causes a fatal error
 set "CXXFLAGS= -MD"
 
