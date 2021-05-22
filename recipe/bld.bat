@@ -11,6 +11,9 @@ if errorlevel 1 exit 1
 sw setup
 if errorlevel 1 exit 1
 
+sw build ..
+if errorlevel 1 exit 1
+
 :: Remove -GL from CXXFLAGS as this causes a fatal error
 set "CXXFLAGS= -MD"
 
