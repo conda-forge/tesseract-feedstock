@@ -32,6 +32,8 @@ requirements:
     - pkg-config  # [not win]
     - make  # [not win]
     - cmake  # [win]
+    - curl <7.71.1  # [win]
+    - m2-unzip  # [win]    
 
   host:
     - giflib  # [not win]
