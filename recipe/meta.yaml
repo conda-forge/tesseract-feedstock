@@ -30,6 +30,7 @@ requirements:
     - automake  # [not win]
     - leptonica    
     - libtool  # [not win]
+    - libtiff
     - pkg-config  # [not win]
     - make  # [not win]
     - cmake  # [win]
