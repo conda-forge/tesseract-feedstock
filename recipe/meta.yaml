@@ -28,6 +28,7 @@ requirements:
     - {{ compiler('cxx') }}
     - autoconf  # [not win]
     - automake  # [not win]
+    - leptonica    
     - libtool  # [not win]
     - pkg-config  # [not win]
     - make  # [not win]
