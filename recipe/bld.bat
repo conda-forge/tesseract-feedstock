@@ -1,4 +1,6 @@
 cd tesseract
+mkdir build
+cd build
 
 curl -fsSOL https://software-network.org/client/sw-master-windows-client.zip
 if errorlevel 1 exit 1
@@ -8,12 +10,6 @@ if errorlevel 1 exit 1
 
 sw setup
 if errorlevel 1 exit 1
-
-mkdir build
-cd build
-
-:: Remove -GL from CXXFLAGS as this causes a fatal error
-set "CXXFLAGS= -MD"
 
 cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
