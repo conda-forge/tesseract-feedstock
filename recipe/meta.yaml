@@ -11,6 +11,7 @@ source:
     folder: tesseract
     patches:
       - 0001_update_CMakeLists_txt.patch
+      - 0002_leptonical_cmake_paths.patch  # [win]
   - url: https://github.com/tesseract-ocr/tessdata_fast/archive/4.0.0.tar.gz
     sha256: f1b71e97f27bafffb6a730ee66fd9dc021afc38f318fdc80a464a84a519227fe
     folder: tessdata_fast
@@ -18,7 +19,7 @@ source:
 
 build:
   number: 5
-  skip: True  # [win and vc<14]
+  skip: True  # [not win or vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
 
