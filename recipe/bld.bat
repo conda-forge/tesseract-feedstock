@@ -1,19 +1,6 @@
 cd tesseract
-
-curl -fsSOL https://software-network.org/client/sw-master-windows-client.zip
-if errorlevel 1 exit 1
-
-unzip sw-master-windows-client.zip -d .
-if errorlevel 1 exit 1
-
-setx path "%path%;%CD%"
-
-sw setup
-if errorlevel 1 exit 1
-
 mkdir build
 cd build
-
 
 cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
