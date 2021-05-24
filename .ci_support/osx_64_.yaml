@@ -23,7 +23,7 @@ libpng:
 libtiff:
 - '4'
 libwebp:
-- '1.1'
+- '1'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 openjpeg:

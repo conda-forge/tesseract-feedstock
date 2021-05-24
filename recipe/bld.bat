@@ -2,9 +2,6 @@ cd tesseract
 mkdir build
 cd build
 
-:: Remove -GL from CXXFLAGS as this causes a fatal error
-set "CXXFLAGS= -MD"
-
 cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^

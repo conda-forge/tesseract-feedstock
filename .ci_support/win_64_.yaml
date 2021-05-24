@@ -1,11 +1,11 @@
 c_compiler:
-- vs2017
+- vs2019
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2017
+- vs2019
 jpeg:
 - '9'
 libarchive:
@@ -15,7 +15,7 @@ libpng:
 libtiff:
 - '4'
 libwebp:
-- '1.1'
+- '1'
 openjpeg:
 - '2.4'
 pin_run_as_build:

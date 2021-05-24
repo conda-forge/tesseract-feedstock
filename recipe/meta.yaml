@@ -17,7 +17,7 @@ source:
     
 
 build:
-  number: 4
+  number: 5
   skip: True  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
@@ -37,7 +37,8 @@ requirements:
     - giflib  # [not win]
     - libarchive
     - jpeg
-    - leptonica
+    - leptonica  # [not win]
+    - leptonica  <1.80  # [win]
     - libpng
     - libtiff
     - libwebp
@@ -87,4 +88,4 @@ extra:
     - adbeda
     - oblute
     - xylar
-    
+    - izahn

@@ -195,6 +195,7 @@ Feedstock Maintainers
 * [@CurtLH](https://github.com/CurtLH/)
 * [@adbeda](https://github.com/adbeda/)
 * [@carlodri](https://github.com/carlodri/)
+* [@izahn](https://github.com/izahn/)
 * [@oblute](https://github.com/oblute/)
 * [@xylar](https://github.com/xylar/)
 
