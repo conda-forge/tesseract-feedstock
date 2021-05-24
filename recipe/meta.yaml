@@ -17,8 +17,8 @@ source:
     
 
 build:
-  number: 4
-  skip: True  # [win and vc<14]
+  number: 5
+  skip: True  # [not win or vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
 
@@ -28,10 +28,14 @@ requirements:
     - {{ compiler('cxx') }}
     - autoconf  # [not win]
     - automake  # [not win]
+    - leptonica    
     - libtool  # [not win]
+    - libtiff
     - pkg-config  # [not win]
     - make  # [not win]
     - cmake  # [win]
+    - curl <7.71.1  # [win]
+    - m2-unzip  # [win]    
 
   host:
     - giflib  # [not win]
