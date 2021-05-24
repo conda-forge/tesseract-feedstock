@@ -29,7 +29,6 @@ requirements:
     - autoconf  # [not win]
     - automake  # [not win]
     - libtool  # [not win]
-    - libtiff
     - pkg-config  # [not win]
     - make  # [not win]
     - cmake  # [win]
