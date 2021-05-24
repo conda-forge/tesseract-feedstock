@@ -196,6 +196,7 @@ Feedstock Maintainers
 * [@adbeda](https://github.com/adbeda/)
 * [@carlodri](https://github.com/carlodri/)
 * [@izahn](https://github.com/izahn/)
+* [@mxr-conda](https://github.com/mxr-conda/)
 * [@oblute](https://github.com/oblute/)
 * [@xylar](https://github.com/xylar/)
 
