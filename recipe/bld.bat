@@ -22,8 +22,7 @@ copy %LIBRARY_LIB%\tesseract41.lib %LIBRARY_LIB%\tesseract.lib
 
 :: Copy tessdata to bin directory so tesseract executable works
 mkdir %LIBRARY_BIN%\tessdata
-copy ..\..\tessdata_fast\eng.traineddata %LIBRARY_BIN%\tessdata\
-copy ..\..\tessdata_fast\osd.traineddata %LIBRARY_BIN%\tessdata\
+copy ..\..\tessdata_fast\* %LIBRARY_BIN%\tessdata\
 
 :: Copy tessdata to build prefix so tesseract API works
 mkdir %PREFIX%\tessdata
