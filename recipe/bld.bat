@@ -20,11 +20,23 @@ if errorlevel 1 exit 1
 :: Make copies of the .lib file without the embedded version number
 copy %LIBRARY_LIB%\tesseract41.lib %LIBRARY_LIB%\tesseract.lib
 
-:: Copy tessdata to bin directory so tesseract executable works
-mkdir %LIBRARY_BIN%\tessdata
-copy ..\..\tessdata_fast\eng.traineddata %LIBRARY_BIN%\tessdata\
-copy ..\..\tessdata_fast\osd.traineddata %LIBRARY_BIN%\tessdata\
+:: Copy tessdata to shared directory
+mkdir %PREFIX%\share\tessdata
+copy ..\..\tessdata_fast\* %PREFIX%\share\tessdata
 
-:: Copy tessdata to build prefix so tesseract API works
-mkdir %PREFIX%\tessdata
-copy %LIBRARY_BIN%\tessdata\*.traineddata %PREFIX%\tessdata\
+setlocal EnableDelayedExpansion
+:: Copy the [de]activate scripts to %PREFIX%\etc\conda\[de]activate.d.
+:: This will allow them to be run on environment activation.
+for %%F in (activate deactivate) DO (
+    if not exist %PREFIX%\etc\conda\%%F.d mkdir %PREFIX%\etc\conda\%%F.d
+    copy %RECIPE_DIR%\%%F.bat %PREFIX%\etc\conda\%%F.d\%PKG_NAME%_%%F.bat
+    if %errorlevel% neq 0 exit /b %errorlevel%
+
+    :: Copy unix shell activation scripts, needed by Windows Bash users
+    copy %RECIPE_DIR%\%%F.sh %PREFIX%\etc\conda\%%F.d\%PKG_NAME%_%%F.sh
+    if %errorlevel% neq 0 exit /b %errorlevel%
+
+    :: Copy unix shell activation scripts, needed by Windows Bash users
+    copy %RECIPE_DIR%\%%F.ps1 %PREFIX%\etc\conda\%%F.d\%PKG_NAME%_%%F.ps1
+    if %errorlevel% neq 0 exit /b %errorlevel%
+)
