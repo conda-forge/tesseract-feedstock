@@ -22,7 +22,7 @@ copy %LIBRARY_LIB%\tesseract41.lib %LIBRARY_LIB%\tesseract.lib
 
 :: Copy tessdata to shared directory
 mkdir %PREFIX%\share\tessdata
-copy ..\..\tessdata_fast\* %PREFIX%\share\tessdata
+copy ..\..\tessdata_fast\*.traineddata %PREFIX%\share\tessdata
 
 setlocal EnableDelayedExpansion
 :: Copy the [de]activate scripts to %PREFIX%\etc\conda\[de]activate.d.
