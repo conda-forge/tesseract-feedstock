@@ -1,5 +1,5 @@
 {% set name = "tesseract" %}
-{% set version = "4.1.1" %}
+{% set version = "4.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   - url: https://github.com/tesseract-ocr/{{ name }}/archive/{{ version }}.tar.gz
-    sha256: 2a66ff0d8595bff8f04032165e6c936389b1e5727c3ce5a27b3e059d218db1cb
+    sha256: 83dc56b544be938983f528c777e4e1d906205b0f6dc0110afc223f2cc1cec6d3
     folder: tesseract
     patches:
       - 0001_update_CMakeLists_txt.patch
-  - url: https://github.com/tesseract-ocr/tessdata_fast/archive/4.0.0.tar.gz
-    sha256: f1b71e97f27bafffb6a730ee66fd9dc021afc38f318fdc80a464a84a519227fe
+  - url: https://github.com/tesseract-ocr/tessdata_fast/archive/4.1.0.tar.gz
+    sha256: d0e3bb6f3b4e75748680524a1d116f2bfb145618f8ceed55b279d15098a530f9
     folder: tessdata_fast
     
 

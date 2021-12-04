@@ -11,7 +11,7 @@ make install
 popd
 
 pushd tessdata_fast
-cp -avf * $PREFIX/share/tessdata
+cp -avf *.traineddata $PREFIX/share/tessdata
 popd
 
 # Copy the [de]activate scripts to $PREFIX/etc/conda/[de]activate.d.
