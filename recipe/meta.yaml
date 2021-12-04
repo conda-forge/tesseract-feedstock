@@ -9,8 +9,6 @@ source:
   - url: https://github.com/tesseract-ocr/{{ name }}/archive/{{ version }}.tar.gz
     sha256: 72467b7876dc0c39ef7fbcb0f793f73aee1c78d9fabab3ab19cbac1eb42e9fed
     folder: tesseract
-    patches:
-      - 0001_update_CMakeLists_txt.patch
   - url: https://github.com/tesseract-ocr/tessdata_fast/archive/4.1.0.tar.gz
     sha256: d0e3bb6f3b4e75748680524a1d116f2bfb145618f8ceed55b279d15098a530f9
     folder: tessdata_fast
