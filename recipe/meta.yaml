@@ -1,5 +1,5 @@
 {% set name = "tesseract" %}
-{% set version = "4.1.3" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/tesseract-ocr/{{ name }}/archive/{{ version }}.tar.gz
-    sha256: 83dc56b544be938983f528c777e4e1d906205b0f6dc0110afc223f2cc1cec6d3
+    sha256: 72467b7876dc0c39ef7fbcb0f793f73aee1c78d9fabab3ab19cbac1eb42e9fed
     folder: tesseract
     patches:
       - 0001_update_CMakeLists_txt.patch
