@@ -8,6 +8,7 @@ cmake -G "NMake Makefiles" ^
       -D CMAKE_INCLUDE_PATH=%LIBRARY_INC% ^
       -D CMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+      -D SW_BUILD=0 ^
       ..
 if errorlevel 1 exit 1
 
