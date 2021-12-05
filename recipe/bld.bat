@@ -9,6 +9,7 @@ cmake -G "NMake Makefiles" ^
       -D CMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D SW_BUILD=0 ^
+      -D BUILD_TRAINING_TOOLS:BOOL=OFF ^
       ..
 if errorlevel 1 exit 1
 
