@@ -6,3 +6,4 @@ azure:
   settings_win:
     pool:
       vmImage: windows-2019
+  store_build_artifacts: True
