@@ -214,7 +214,6 @@ Feedstock Maintainers
 =====================
 
 * [@CurtLH](https://github.com/CurtLH/)
-* [@adbeda](https://github.com/adbeda/)
 * [@carlodri](https://github.com/carlodri/)
 * [@izahn](https://github.com/izahn/)
 * [@mxr-conda](https://github.com/mxr-conda/)
