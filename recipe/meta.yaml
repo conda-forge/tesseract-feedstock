@@ -35,27 +35,13 @@ requirements:
     - giflib  # [not win]
     - libarchive
     - jpeg
-    - leptonica  # [not win]
-    - leptonica  <1.80  # [win]
-    - libpng
-    - libtiff
-    - libwebp
-    - openjpeg
-    - xz  # [not win]
-    - zlib
-
-  run:
-    - libpng
-    - jpeg
-    - libtiff
-    - zlib
     - leptonica
+    - libpng
+    - libtiff
     - libwebp
-    - libarchive
-    - xz  # [not win]
     - openjpeg
-    - giflib  # [not win]
-
+    - xz  # [not win]
+    - zlib
 
 test:
   files:
