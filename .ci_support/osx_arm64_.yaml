@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '13'
+- '14'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '13'
+- '14'
 giflib:
 - '5.2'
 jpeg:
@@ -27,7 +27,7 @@ libwebp:
 macos_machine:
 - arm64-apple-darwin20.0.0
 openjpeg:
-- '2.4'
+- '2.5'
 pin_run_as_build:
   jpeg:
     max_pin: x

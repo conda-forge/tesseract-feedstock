@@ -15,7 +15,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
@@ -43,19 +43,6 @@ requirements:
     - openjpeg
     - xz  # [not win]
     - zlib
-
-  run:
-    - libpng
-    - jpeg
-    - libtiff
-    - zlib
-    - leptonica
-    - libwebp
-    - libarchive
-    - xz  # [not win]
-    - openjpeg
-    - giflib  # [not win]
-
 
 test:
   files:
