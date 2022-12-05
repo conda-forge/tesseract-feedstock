@@ -17,7 +17,7 @@ giflib:
 jpeg:
 - '9'
 libarchive:
-- '3.5'
+- '3.6'
 libpng:
 - '1.6'
 libtiff:
@@ -27,24 +27,11 @@ libwebp:
 macos_machine:
 - arm64-apple-darwin20.0.0
 openjpeg:
-- '2.5'
-pin_run_as_build:
-  jpeg:
-    max_pin: x
-  libpng:
-    max_pin: x.x
-  libtiff:
-    max_pin: x
-  openjpeg:
-    max_pin: x.x
-  xz:
-    max_pin: x.x
-  zlib:
-    max_pin: x.x
+- '2'
 target_platform:
 - osx-arm64
 xz:
-- '5.2'
+- '5'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
