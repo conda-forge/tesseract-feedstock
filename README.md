@@ -1,11 +1,11 @@
-About tesseract
-===============
+About tesseract-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tesseract-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tesseract-ocr/tesseract
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tesseract-feedstock/blob/main/LICENSE.txt)
 
 Summary: An optical character recognition (OCR) engine
 
