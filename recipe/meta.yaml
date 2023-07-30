@@ -34,7 +34,7 @@ requirements:
   host:
     - giflib  # [not win]
     - libarchive
-    - jpeg
+    - libjpeg-turbo
     - leptonica
     - libpng
     - libtiff
