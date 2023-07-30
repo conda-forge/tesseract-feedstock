@@ -35,8 +35,7 @@ requirements:
     - giflib  # [not win]
     - libarchive
     - jpeg
-    - leptonica  # [not win]
-    - leptonica  <1.80  # [win]
+    - leptonica
     - libpng
     - libtiff
     - libwebp
