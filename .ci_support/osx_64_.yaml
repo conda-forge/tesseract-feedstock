@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '14'
+- '15'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,17 +11,17 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '14'
+- '15'
 giflib:
 - '5.2'
-jpeg:
-- '9'
 libarchive:
 - '3.6'
+libjpeg_turbo:
+- 2.1.5
 libpng:
 - '1.6'
 libtiff:
-- '4.4'
+- '4.5'
 libwebp:
 - '1'
 macos_machine:
