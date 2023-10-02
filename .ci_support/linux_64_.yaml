@@ -17,13 +17,13 @@ docker_image:
 giflib:
 - '5.2'
 libarchive:
-- '3.6'
+- '3.7'
 libjpeg_turbo:
 - 2.1.5
 libpng:
 - '1.6'
 libtiff:
-- '4.5'
+- '4.6'
 libwebp:
 - '1'
 openjpeg:
