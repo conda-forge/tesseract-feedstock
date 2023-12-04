@@ -1,5 +1,5 @@
 {% set name = "tesseract" %}
-{% set version = "5.3.2" %}
+{% set version = "5.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/tesseract-ocr/{{ name }}/archive/{{ version }}.tar.gz
-    sha256: b99d30fed47360d7168c3e25d194a7416ceb1d9e4b232c7f121cc5f77084d3e7
+    sha256: dc4329f85f41191b2d813b71b528ba6047745813474e583ccce8795ff2ff5681
     folder: tesseract
   - url: https://github.com/tesseract-ocr/tessdata_fast/archive/4.1.0.tar.gz
     sha256: d0e3bb6f3b4e75748680524a1d116f2bfb145618f8ceed55b279d15098a530f9
@@ -15,7 +15,7 @@ source:
 
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
