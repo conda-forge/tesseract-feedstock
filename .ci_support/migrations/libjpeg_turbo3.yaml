@@ -2,6 +2,6 @@ __migrator:
   build_number: 1
   kind: version
   migration_number: 1
-libarchive:
-- '3.7'
-migrator_ts: 1694554956.6608543
+libjpeg_turbo:
+- '3'
+migrator_ts: 1693842343.429878
