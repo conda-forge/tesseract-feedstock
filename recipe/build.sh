@@ -5,7 +5,9 @@ pushd tesseract
 autoreconf -vi
 ./autogen.sh
 mkdir build && cd build
-../configure --prefix="${PREFIX}"
+libarchive_CFLAGS="-I${PREFIX}/include" \
+libarchive_LIBS="-I${PREFIX}/lib" \
+../configure --with-archive --with-curl --prefix="${PREFIX}"
 make -j $CPU_COUNT
 make install
 popd
