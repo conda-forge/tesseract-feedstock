@@ -15,7 +15,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
@@ -35,6 +35,7 @@ requirements:
   host:
     - giflib  # [not win]
     - libarchive
+    - libcurl
     - libjpeg-turbo
     - leptonica
     - libpng
