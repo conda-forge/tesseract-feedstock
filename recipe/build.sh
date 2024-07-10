@@ -12,7 +12,6 @@ popd
 
 pushd tessdata_fast
 cp -avf *.traineddata $PREFIX/share/tessdata
-cp -avf configs/*.* $PREFIX/share/tessdata/configs
 popd
 
 # Copy the [de]activate scripts to $PREFIX/etc/conda/[de]activate.d.
