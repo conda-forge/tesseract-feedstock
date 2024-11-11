@@ -15,7 +15,7 @@ libjpeg_turbo:
 libpng:
 - '1.6'
 libtiff:
-- '4.6'
+- '4.7'
 libwebp:
 - '1'
 openjpeg:
