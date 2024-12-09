@@ -5,6 +5,12 @@ pushd tesseract
 autoreconf -vi
 ./autogen.sh
 mkdir build && cd build
+
+# See https://conda-forge.org/docs/maintainer/knowledge_base.html#newer-c-features-with-old-sdk
+if [[ "${target_platform}" == "osx-64" ]]; then
+    export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
+fi
+
 ../configure --prefix="${PREFIX}"
 make -j $CPU_COUNT
 make install
