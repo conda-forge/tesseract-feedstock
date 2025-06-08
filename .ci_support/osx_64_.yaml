@@ -21,7 +21,7 @@ cxx_compiler_version:
 giflib:
 - '5.2'
 libarchive:
-- '3.7'
+- '3.8'
 libjpeg_turbo:
 - '3'
 libpng:
