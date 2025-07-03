@@ -9,7 +9,7 @@ channel_targets:
 cxx_compiler:
 - vs2019
 libarchive:
-- '3.7'
+- '3.8'
 libjpeg_turbo:
 - '3'
 libpng:
