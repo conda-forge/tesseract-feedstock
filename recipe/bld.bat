@@ -30,19 +30,7 @@ mkdir %PREFIX%\share\tessdata
 copy ..\..\tessdata_fast\*.traineddata %PREFIX%\share\tessdata
 move %LIBRARY_LIB%\share\tessdata\configs %PREFIX%\share\tessdata
 
-setlocal EnableDelayedExpansion
-:: Copy the [de]activate scripts to %PREFIX%\etc\conda\[de]activate.d.
-:: This will allow them to be run on environment activation.
-for %%F in (activate deactivate) DO (
-    if not exist %PREFIX%\etc\conda\%%F.d mkdir %PREFIX%\etc\conda\%%F.d
-    copy %RECIPE_DIR%\%%F.bat %PREFIX%\etc\conda\%%F.d\%PKG_NAME%_%%F.bat
-    if %errorlevel% neq 0 exit /b %errorlevel%
-
-    :: Copy unix shell activation scripts, needed by Windows Bash users
-    copy %RECIPE_DIR%\%%F.sh %PREFIX%\etc\conda\%%F.d\%PKG_NAME%_%%F.sh
-    if %errorlevel% neq 0 exit /b %errorlevel%
-
-    :: Copy unix shell activation scripts, needed by Windows Bash users
-    copy %RECIPE_DIR%\%%F.ps1 %PREFIX%\etc\conda\%%F.d\%PKG_NAME%_%%F.ps1
-    if %errorlevel% neq 0 exit /b %errorlevel%
-)
+:: Set TESSDATA_PREFIX via env_vars.d JSON (handled by conda at activation time).
+if not exist %PREFIX%\etc\conda\env_vars.d mkdir %PREFIX%\etc\conda\env_vars.d
+python -c "import json,os; p=os.environ['PREFIX']; print(json.dumps({'TESSDATA_PREFIX':p.replace(chr(92),'/')+'/share/tessdata/'}))" > %PREFIX%\etc\conda\env_vars.d\%PKG_NAME%.json
+if errorlevel 1 exit 1
