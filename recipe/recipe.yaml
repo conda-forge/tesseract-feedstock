@@ -47,6 +47,8 @@ requirements:
     - openjpeg
     - liblzma-devel
     - zlib
+  run:
+    - ${{ pin_compatible('libgomp', max_pin='x.x') }}
   run_exports:
     - ${{ pin_subpackage(name, upper_bound='x.x.x') }}
 
