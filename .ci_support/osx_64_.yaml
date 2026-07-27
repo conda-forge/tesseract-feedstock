@@ -22,6 +22,8 @@ giflib:
 - '5.2'
 libarchive:
 - '3.8'
+libcurl:
+- '8'
 libjpeg_turbo:
 - '3'
 liblzma_devel:
@@ -32,6 +34,8 @@ libtiff:
 - '4.7'
 libwebp:
 - '1'
+llvm_openmp:
+- '19'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 openjpeg:
