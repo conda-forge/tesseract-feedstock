@@ -25,19 +25,17 @@ requirements:
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
     - ${{ compiler('cxx') }}
-    - if: not win
-      then: autoconf
-    - if: not win
-      then: automake
-    - if: not win
-      then: libtool
     - pkg-config
     - if: not win
-      then: make
+      then:
+        - autoconf
+        - automake
+        - libtool
+        - make
     - if: win
-      then: cmake
-    - if: win
-      then: ninja
+      then:
+        - cmake
+        - ninja
   host:
     - giflib
     - libarchive
