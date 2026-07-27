@@ -65,8 +65,12 @@ tests:
       - tesseract --version
       - if: osx
         then:
-          - bash -c "tesseract --version 2>&1 | grep -q 'Found OpenMP'"
-      - bash -c "tesseract --version 2>&1 | grep -q 'Found libarchive'"
+          - tesseract --version 2>&1 | grep -q 'Found OpenMP'
+      - if: win
+        then:
+          - tesseract --version 2>&1 | findstr /C:"Found libarchive" >nul
+        else:
+          - tesseract --version 2>&1 | grep -q 'Found libarchive'
 
 about:
   license: Apache-2.0
