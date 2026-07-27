@@ -1,0 +1,93 @@
+schema_version: 1
+
+context:
+  name: tesseract
+  version: "5.5.3"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  - url: https://github.com/tesseract-ocr/${{ name }}/archive/${{ version }}.tar.gz
+    sha256: 9218e62793116d42a9f6d14cd9348518b27f382096eea3d0f2d1a24616bb5884
+    target_directory: tesseract
+  - url: https://github.com/tesseract-ocr/tessdata_fast/archive/4.1.0.tar.gz
+    sha256: d0e3bb6f3b4e75748680524a1d116f2bfb145618f8ceed55b279d15098a530f9
+    target_directory: tessdata_fast
+
+build:
+  number: 0
+  skip: win and vc<14
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
+    - pkg-config
+    - if: not win
+      then:
+        - autoconf
+        - automake
+        - libtool
+        - make
+    - if: win
+      then:
+        - cmake
+        - ninja
+  host:
+    - giflib
+    - libarchive
+    - libcurl
+    - libjpeg-turbo
+    - leptonica
+    - libpng
+    - libtiff
+    - libwebp
+    - openjpeg
+    - liblzma-devel
+    - zlib
+    - if: osx
+      then:
+        - llvm-openmp
+  run_exports:
+    - ${{ pin_subpackage(name, upper_bound='x.x.x') }}
+
+tests:
+  - files:
+      recipe:
+        - eurotext.tif
+    script:
+      - tesseract --help
+      - tesseract --list-langs
+      - tesseract eurotext.tif outputbase
+      - tesseract --version
+      - if: osx
+        then:
+          - tesseract --version 2>&1 | grep -q 'Found OpenMP'
+      - if: win
+        then:
+          - tesseract --version 2>&1 | findstr /C:"Found libarchive" >nul
+        else:
+          - tesseract --version 2>&1 | grep -q 'Found libarchive'
+
+about:
+  license: Apache-2.0
+  license_file: tesseract/LICENSE
+  summary: An optical character recognition (OCR) engine
+  description: |
+    Tesseract is an OCR engine with support for unicode and the ability
+    to recognize more than 100 languages out of the box. It can be
+    trained to recognize other languages.
+  homepage: https://github.com/tesseract-ocr/tesseract
+  repository: https://github.com/tesseract-ocr/tesseract
+  documentation: https://github.com/tesseract-ocr/tesseract
+
+extra:
+  recipe-maintainers:
+    - mxr-conda
+    - CurtLH
+    - carlodri
+    - oblute
+    - izahn

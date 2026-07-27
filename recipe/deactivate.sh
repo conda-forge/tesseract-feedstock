@@ -1,1 +1,0 @@
-unset TESSDATA_PREFIX
