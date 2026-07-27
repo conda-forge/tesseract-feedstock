@@ -39,6 +39,7 @@ requirements:
   host:
     - giflib
     - libarchive
+    - libcurl
     - libjpeg-turbo
     - leptonica
     - libpng
@@ -47,6 +48,9 @@ requirements:
     - openjpeg
     - liblzma-devel
     - zlib
+    - if: osx
+      then:
+        - llvm-openmp
   run_exports:
     - ${{ pin_subpackage(name, upper_bound='x.x.x') }}
 
@@ -58,6 +62,11 @@ tests:
       - tesseract --help
       - tesseract --list-langs
       - tesseract eurotext.tif outputbase
+      - tesseract --version
+      - if: osx
+        then:
+          - bash -c "tesseract --version 2>&1 | grep -q 'Found OpenMP'"
+      - bash -c "tesseract --version 2>&1 | grep -q 'Found libarchive'"
 
 about:
   license: Apache-2.0
