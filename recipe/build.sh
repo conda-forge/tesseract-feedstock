@@ -11,7 +11,7 @@ if [[ "${target_platform}" == "osx-64" ]]; then
     export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 fi
 
-../configure --prefix="${PREFIX}"
+../configure --prefix="${PREFIX}" --disable-openmp
 make -j $CPU_COUNT
 make install
 popd
