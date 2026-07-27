@@ -17,7 +17,6 @@ Tesseract is an OCR engine with support for unicode and the ability
 to recognize more than 100 languages out of the box. It can be
 trained to recognize other languages.
 
-
 Current build status
 ====================
 
