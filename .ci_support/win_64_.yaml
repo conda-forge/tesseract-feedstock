@@ -9,7 +9,7 @@ channel_targets:
 cxx_compiler:
 - vs2022
 giflib:
-- '5.2'
+- '6'
 libarchive:
 - '3.8'
 libcurl:
